@@ -1,24 +1,10 @@
-.toolbar-item-spacer {
-    flex: 1 1 auto;
-}
-
-.app-container {
-    height: 80%;
-    margin: 0;
-}
-
-.app-sidenav {
-    width: 400px;
-}
-
 .header {
-    background-color: white;
-    height: 10%; /* adjust according to your preference */
+    height: 100px; /* adjust according to your preference */
     display: flex; /* use flexbox to align the header content */
     align-items: center; /* center the content vertically */
     padding: 10px; /* add some space around the content */
 }
-
+    
 img {
     height: 80px; /* adjust according to your logo size */
 }
