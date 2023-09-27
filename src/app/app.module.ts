@@ -15,31 +15,42 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatListModule } from '@angular/material/list';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatBadgeModule } from '@angular/material/badge';
+import { FormsModule } from '@angular/forms';
+import { CountPanelLinksPipe } from './core/pipes/count-panel-links/count-panel-links.pipe';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { TableCompleteOrder } from './core/components/table-complete-order/table-complete-order/table-complete-order.component';
 
 const routes = [
-  { path: '', component: HomeComponent }
+  { path: '', component: HomeComponent },
+  { path: '/order/ocs-update-status', component: TableCompleteOrder}
 ];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    HomeComponent
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    MatSidenavModule,
-    MatListModule,
-    MatIconModule,
-    MatMenuModule,
-    MatToolbarModule,
-    MatExpansionModule,
-    RouterModule.forRoot(routes)
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HeaderComponent,
+        FooterComponent,
+        HomeComponent,
+        CountPanelLinksPipe
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        MatSidenavModule,
+        MatListModule,
+        MatIconModule,
+        MatMenuModule,
+        MatToolbarModule,
+        MatExpansionModule,
+        MatBadgeModule,
+        FormsModule,
+        RouterModule.forRoot(routes),
+        NgbModule,
+        TableCompleteOrder
+    ]
 })
 export class AppModule { }
