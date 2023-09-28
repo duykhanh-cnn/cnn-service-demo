@@ -11,10 +11,10 @@ export class AppComponent implements OnInit {
     {
       title: 'Đơn hàng',
       links: [
-        {
-          name: 'Cập nhật trạng thái đơn hàng',
-          routerLink: '/order/ocs-update-status',
-        },
+        // {
+        //   name: 'Cập nhật trạng thái đơn hàng',
+        //   routerLink: '/orders/table-update-order-status',
+        // },
       ],
     },
     {
@@ -22,8 +22,8 @@ export class AppComponent implements OnInit {
       links: [
         {
           name: 'Kích hoạt sản phẩm',
-          routerLink: '#',
-        },
+          routerLink: '/products/table-receive-pending-product',
+        }
       ],
     },
     {

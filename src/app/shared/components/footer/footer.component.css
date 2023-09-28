@@ -1,16 +1,15 @@
 .footer {
-  height: 50px;
+  height: 40px;
   position: fixed;
   bottom: 0;
   width: 100%;
+  background-color: #eeeaea;
+  font-size: small;
+  
 }
 
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-p {
-  margin: 0;
 }

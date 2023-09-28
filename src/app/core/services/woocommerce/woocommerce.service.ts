@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import WooCommerceRestApi from '@woocommerce/woocommerce-rest-api';
 import { from, map } from 'rxjs';
 import { environment } from '../../environment/environment';
+import { SortDirection } from '@angular/material/sort';
 
 @Injectable({
 providedIn: 'root'
@@ -16,6 +17,17 @@ export class WoocommerceService {
   });
 
   constructor() { }
+
+  getPendingProducts(sort: string, order: SortDirection, page: number, per_page: number) {
+    return from(this.wooCommerce.get('products', {
+      status: 'pending',
+      per_page: per_page,
+      page: page + 1
+    })).pipe(
+      map((result) => {
+        return result.data;
+    }));
+  }
 
   getOrders() {    
     return from(this.wooCommerce.get('orders', {
